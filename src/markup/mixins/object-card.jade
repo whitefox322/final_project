@@ -1,0 +1,21 @@
+mixin object-card(title, label, imgSrc, classPrefix)
+	.thumbnail.object-card(class=classPrefix)
+		img.object-card__img(class= classPrefix + "__img", src=imgSrc alt=title)
+		.label.label-success.object-card__label(class=classPrefix + "__label")= label
+		.caption.object-card__caption(class=classPrefix + "__caption")
+			h3.object-card__header(class=classPrefix + "__header")= title
+			p.object-card__desc(class=classPrefix + "__desc")
+				span.object-card__desc-wrapper
+					block
+				a.object-card__read-more(class=classPrefix + "__read-more", href="#")
+			.object-card__footer(class=classPrefix + "__footer")
+				.object-card__publish-date(class=classPrefix + "__publish-date") 25/06/2016 14:30
+				.object-card__comments-count(class=classPrefix + "__comments-count") 5
+				.object-card__share-btn(class=classPrefix + "__share-btn", href="#")
+					ul.share-btns
+						li.share-btns__item
+							a(href="#", class="share-btns__link goodshare")
+								span.icon-vkontakte
+						li.share-btns__item
+							a(href="#", class="share-btns__link goodshare")
+								span.icon-facebook

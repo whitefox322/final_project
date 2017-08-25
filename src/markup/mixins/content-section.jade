@@ -1,0 +1,12 @@
+mixin content-section(title, buttonText)
+	if title
+		.row
+			header.col-xs-12
+				.section-header-container
+					if buttonText
+						.section-header__btn-container
+							a.section-header__btn(href="#")= buttonText
+
+					h2.section-header= title
+
+	block

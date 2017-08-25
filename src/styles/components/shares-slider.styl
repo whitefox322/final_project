@@ -1,0 +1,93 @@
+slider-height = 250px
+slider-width = 375px
+@import "../mixins/btn"
+
+.shares-slider
+	&__img-container
+		width: slider-width
+		height: slider-height
+		position: relative
+		float: left
+	&__img
+		width: auto
+		height: auto
+		min-width: 100%
+		min-height: 100%
+		position: absolute
+		top: 0
+		left: 0
+
+	&__text-container
+		background: main-green-color
+		height slider-height
+		margin-left: slider-width
+		padding: 30px 60px
+		position: relative
+		z-index: 1
+	&__caption
+		top: 0
+		left: 0
+		padding: 0
+		position: static
+		text-align: left
+		text-shadow: none
+	&__indicators
+		width: auto
+		margin: 0
+		bottom: 15px
+		right: 60px
+		left: auto
+	&__indicator
+		//
+	&__title
+		font-family: "Roboto Light", sans-serif
+		font-size: 26px
+		color: white-text-color
+		text-transform: uppercase
+		margin: 0 0 20px
+		max-height: 60px
+		overflow: hidden
+		-ms-text-overflow: ellipsis
+		text-overflow: ellipsis
+		width: 250px
+	&__desc-container
+		position: relative
+	&__desc
+		font-family: "Roboto Regular", sans-serif
+		font-size: 14px
+		width: 250px
+		position: relative
+		//word-break: break-all
+		max-height: 100px
+		overflow: hidden
+
+	&__readmore
+		background: url(/icons/shares-img.png) no-repeat center
+		//flaticon-share()
+		width: 56px
+		height: 59px
+		position: absolute
+		content: ''
+		right: -56px
+		top: 50%
+		margin-top: -30px
+
+	&__read
+		btn(white-text-color, white-text-color)
+		padding-left: 18px
+		padding-right: 18px
+		position: absolute
+		bottom: 15px
+		right: 335px
+		z-index: 2
+		&:hover
+			color: text-default-color
+
+	&__inner
+		//
+	&__item
+		//
+
+@media (max-width: 630px)
+	.verified-objects-slider__desc
+		display: none

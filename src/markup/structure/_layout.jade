@@ -1,0 +1,46 @@
+- var isDevelopment = true
+doctype html
+html
+	head
+		title
+			block title
+		if isDevelopment
+			link(rel="stylesheet", href="/css/vendor.min.css")
+		link(rel="stylesheet", href="/css/app.min.css")
+	body
+		include _header
+		section.separate-section.top-advert-section
+			.container
+				include ../components/top-advert
+		section.data
+			.container
+				.row
+					.col-md-9.content
+						block content
+					.col-md-3.sidebar
+						.row
+							.col-xs-12
+								.last-news-widget.sidebar-widget
+									include ../components/last-news
+							.col-xs-12
+								.sm-advert-widget.sidebar-widget
+									include ../components/sm-advert
+						.row
+							.col-xs-6.col-md-12
+								.company-of-month-widget.sidebar-widget
+									include ../components/company-of-month
+							.col-xs-6.col-md-12
+								.top-companies-widget.sidebar-widget
+									include ../components/top-companies
+						.md-advert-widget.sidebar-widget
+							include ../components/md-advert
+						.top-objects-widget.sidebar-widget
+							include ../components/top-objects
+						.register-widget.sidebar-widget
+							include ../components/register
+						.md-advert-widget.sidebar-widget
+							include ../components/md-advert
+
+		include _footer
+
+		script(src="/js/app.min.js")

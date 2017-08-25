@@ -1,0 +1,58 @@
+.share-btns
+	margin: 0
+	padding: 5px 0
+	list-style: none
+	position: absolute
+	top: 30px
+	left: 50%
+	margin-left: -25px
+	width: 50px
+	text-align: center
+	background: #fff
+	z-index: 3
+	-webkit-border-radius: 5px
+	-moz-border-radius: 5px
+	border-radius: 5px
+	box-shadow: 0 0 10px #000
+
+	&:before
+		content: ""
+		position: absolute
+		width: 0
+		height: 0
+		top: -19px
+		left: 50%
+		margin-left: -10px
+		border: 10px white solid
+		border-top-color: transparent
+		border-right-color: transparent
+		border-left-color: transparent
+
+	&__item
+		margin-top: 2px
+
+		&:first-child
+			margin: 0
+	&__link
+		font-size: 14px
+		padding: 10px
+		background: #cccccc
+		text-align: center
+		display: inline-block
+		color: #fff
+		-webkit-border-radius: 5px
+		-moz-border-radius: 5px
+		border-radius: 5px
+		&:hover
+			text-shadow: 0 0 10px #fff
+		&:active
+			text-shadow: 0 0 5px #aff
+.share-btns.share-btns--top
+	top: auto;
+	bottom: 30px
+
+	&:before
+		bottom: -19px
+		top: auto
+		border-top-color: white
+		border-bottom-color: transparent

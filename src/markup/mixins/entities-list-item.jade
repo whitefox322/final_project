@@ -1,0 +1,11 @@
+include rating
+mixin entities-list-item(imgSrc, title, ratingValue, prefix)
+	li(class=prefix + "__list-item").entities-list__item
+		a(href="#")
+			.row(class=prefix + "__list-row")
+				.col-xs-4(class=prefix + "__list-img-col")
+					img(class=prefix + "__list-img", src=imgSrc).entities-list__img.img-responsive
+				.col-xs-8(class=prefix + "__list-text-col")
+					h4(class=prefix + "__list-header").entities-list__header= title
+					.entities-list__rating(class=prefix + "__list-rating")
+						+rating(ratingValue)

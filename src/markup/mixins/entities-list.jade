@@ -1,0 +1,5 @@
+include panel
+mixin entities-list(title, prefix)
+	+panel(title, prefix)
+		ul.entities-list(class=prefix + "__list")
+			block

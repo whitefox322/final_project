@@ -1,0 +1,70 @@
+@import "../mixins/btn"
+.register
+	border-color: main-green-color
+	text-align: center
+	padding-bottom: 10px
+
+	&:before
+		content: ''
+		display: block
+		height: 150px
+		//background-image: url(/icons/add-company-img.png)
+		flaticon-building()
+		font-size: 120px
+		color: main-green-color
+		background-repeat: no-repeat
+		background-position: center
+
+	&__heading
+		background: transparent !important
+		border: none
+
+	&__title
+		font-size: 18px
+		font-family: "Roboto Light", sans-serif
+		color: header-text-color
+
+	&__img
+		width: 150px
+		height: 100px
+
+	&__body
+		padding-top: 0
+
+	&__desc
+		margin-bottom: 10px
+		font-size: 14px
+		color: #737373
+		font-family: "Roboto Regular", sans-serif
+		line-height: 1.25
+
+	&__btn
+		display: inline-block
+		background main-green-color
+		color white-text-color
+		padding 8px 20px 8px 40px
+		border-radius: 50px
+		font-size: 16px
+		transition border-color, color, background .3s
+		font-family: "Roboto Medium", sans-serif
+		position: relative
+		font-weight: lighter
+
+		&:before
+			content: ''
+			position: absolute
+			height: 19px
+			width: 19px
+			top: 9px
+			left: 16px
+			//background: url(/icons/add-btn-icon.png) no-repeat center;
+			flaticon-add-circular-outlined-button()
+		&:hover
+			background lighten(rgba(main-green-color, 90%), 20%)
+			text-decoration none
+			color white-text-color
+		&:active
+		&:focus
+			background darken(rgba(main-green-color, 90%), 20%) !important
+			outline none !important
+			color white-text-color

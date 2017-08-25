@@ -1,0 +1,19 @@
+.last-news
+	.last-news__header
+		.last-news__header-text Останні новини
+	ul.last-news__list
+
+		- for (var i = 0; i < 2; i++)
+			li.last-news__item.last-news__delim
+				.last-news__delim-text 06/09/2016
+			li.last-news__item.clearfix
+				a.last-news__news-item(href="#")
+					.last-news__date 16:45
+					.last-news__text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem deleniti saepe ipsa! Nisi alias in ullam recusandae eligendi, impedit obcaecati. Optio sit obcaecati, error voluptas pariatur tenetur similique illum praesentium.
+			li.last-news__item.last-news__news-item.clearfix
+				a.last-news__news-item(href="#")
+					.last-news__date 16:45
+					.last-news__text  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem deleniti saepe ipsa! Nisi alias in ullam recusandae eligendi, impedit obcaecati. Optio sit obcaecati, error voluptas pariatur tenetur similique illum praesentium.
+
+	.last-news__show-all-btn-container
+		a.last-news__show-all-btn(href="#") Всі новини

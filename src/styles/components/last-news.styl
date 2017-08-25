@@ -1,0 +1,83 @@
+@import "../mixins/btn"
+.last-news
+	position: relative
+
+	&__delim
+	&__header
+		position: relative
+
+		&-text
+			line-height: 1
+			position: relative
+			display: inline-block
+			font-family: "Roboto Light", sans-serif
+			padding-right: 10px;
+			background: bg-color
+			z-index: 2
+			word-break: break-all
+
+		&:after
+			z-index: 1
+			position: absolute
+			content: ''
+			width: 100%
+			height: 1px
+			top: 50%
+			left: 0
+
+
+
+	&__header
+		position: relative
+		margin-bottom: 12px
+
+		&-text
+			font-size: 26px
+			color: header-text-color
+
+		&:after
+			background: main-green-color
+
+	&__list
+		margin: 0
+		padding: 0
+		list-style: none
+
+	&__delim
+		position: relative
+
+		&-text
+			font-size: 10px
+			color: main-green-color
+
+		&:after
+			background: #dcdcdc
+
+	&__item
+		margin-bottom: 12px
+	&__news-item
+		&:hover
+			text-decoration: none
+	.last-news__news-item--active
+	.last-news__news-item:hover
+		.last-news__text
+			color: main-green-color
+
+	&__date
+		width: 50px
+		float: left
+		color: #aaa
+		font-size: 14px
+		font-family: "Roboto Regular", sans-serif
+
+	&__text
+		margin-left: 50px
+		font-size: 13px
+		font-family: "Roboto Regular", sans-serif
+
+		//word-break: break-all
+		color: #737373
+	&__show-all-btn
+		&-container
+			text-align: center
+		btn()

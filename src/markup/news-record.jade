@@ -1,0 +1,26 @@
+extends structure/_layout
+include mixins/content-section
+include mixins/rating
+include mixins/breadcrumb
+block title 
+	| Новини
+
+block content
+	section.separate-section
+		.row
+			.col-xs-12
+				+breadcrumb("Якась новина", ["Головна", 'Новини'])
+		.row.news-record
+			.col-xs-12.news-record__heading-container
+				header.news-record__heading
+					h1.news-record__title
+						span.news-record__text Якась новина
+					.news-record__date 18.10.2016 11:29
+					.news-record__tags-container
+						ul.news-item__tags
+							- for (var s = 0; s < 7; s++)
+								li.news-item__tag
+									a.news-item__tag-link(href="#") Tag name #{s + 1}
+			.col-xs-12.news-record__img-container
+				.news-record__img
+					img.news-record__pic(src="https://placehold.it/900x400")

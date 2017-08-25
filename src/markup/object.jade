@@ -1,0 +1,42 @@
+extends structure/_layout
+include mixins/rating
+include mixins/breadcrumb
+include mixins/item-logo
+
+block title
+	| ЖК "Марко Поло"
+block content
+	section.separate-section
+		.row
+			.col-xs-12
+				+breadcrumb('ЖК "Марко Поло"', ["Головна", "Об'єкти будівництва"])
+	section.separate-section.object-header-container
+		include components/object-header
+	section.separate-section.object-info-section
+		.row
+			.col-xs-12.col-md-6
+				.object-address-container
+					include components/object-address
+			.col-md-3.col-xs-6
+				.company-logo-container
+					+item-logo("Забудовник", 'БК "РІЕЛ"')
+			.col-md-3.col-xs-6
+				.object-logo-container
+					+item-logo("Об'єкт", 'ЖК "Марко Поло"')
+	section.separate-section.object-desc-container
+		.row
+			.col-xs-12
+				include components/object-desc
+	section.separate-section.object-map-container
+		include components/object-map
+	- for (var i = 0; i < 3; i++)
+		section.separate-section.gallery-container
+			.row
+				.col-xs-12
+					include components/object-gallery
+	section.separate-section.object-reviews-section
+		include components/object-reviews
+	section.separate-section.object-recommendations-section
+		include components/object-recommendations
+
+

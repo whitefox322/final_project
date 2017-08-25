@@ -1,0 +1,119 @@
+@import "../mixins/icon"
+@import "../mixins/label"
+
+.object-card
+	padding 0
+	margin 0
+	position relative
+	border none
+
+	&__img
+		width 100%
+		border-top-left-radius 4px
+		border-top-right-radius 4px
+	&__label
+		label()
+		padding-left 10px
+		padding-right 10px
+		top 15px
+		left 5px
+	&__caption
+		padding 15px
+		background #f4f4f4
+		border-bottom-left-radius 4px
+		border-bottom-right-radius 4px
+
+		transition: background .5s
+
+	&__header
+		margin 10px 0 15px
+		height: 50px
+		overflow: hidden
+		font-size 16px
+		font-family "Roboto Bold", sans-serif
+		
+	&__desc
+		position relative
+		margin 0
+		font-size 12px
+		font-family "Roboto Regular", sans-serif
+		line-height 1.25
+		padding-right: 30px
+		//word-break: break-all
+
+		&-wrapper
+			display inline-block
+			overflow hidden
+			height 60px
+	&__read-more
+		width 13px
+		height 25px
+		position absolute
+		bottom 0
+		right 10px
+		background url("/icons/read-more-icon.png") no-repeat center
+		
+	&__footer
+		margin-top 15px
+		border-top 1px solid #d7d7d7
+		text-align justify
+		line-height 1
+		padding-top 15px
+		font-size 0
+		
+		&:after
+			content ''
+			display inline-block
+			width 100%
+			height 0
+
+	&__publish-date
+	&__comments-count
+	&__share-btn
+		display inline-block
+		font-size 14px
+		font-family "Roboto Regular", sans-serif
+		position relative
+		padding-left 20px
+		height 16px
+		min-width 16px
+		color light-grey-color
+
+		&:after
+			margin-top -10px !important
+		
+	&__publish-date
+		&:after
+			icon("/icons/date-icon.png")
+			flaticon-calendar()
+	&__comments-count
+		&:after
+			icon("/icons/comments-count-icon.png")
+			flaticon-chat-comment-oval-speech-bubble-with-text-lines()
+	&__share-btn
+		padding 0
+		position: relative
+		cursor: pointer
+		text-align: center
+
+		&:after
+			icon("/icons/share-icon.png")
+			flaticon-share()
+			height 19px
+			width 16px
+			margin-top -4px !important
+
+
+
+	&:hover
+		.object-card__caption
+			background: main-green-color
+		.object-card__share-btn
+
+		.object-card__header
+		.object-card__desc
+		.object-card__publish-date
+		.object-card__comments-count
+		.object-card__share-btn
+			color: white-text-color
+			

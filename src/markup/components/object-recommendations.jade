@@ -1,0 +1,28 @@
+h2.object-recommendations-slider__header Рекомендовані статті
+
+.object-recommendations-slider.carousel.slide(data-ride="carousel")
+	// Wrapper for slides
+	.carousel-inner(role="listbox")
+		.object-recommendations-slider__item.item.active
+			.row.object-recommendations-slider__row
+				- for (var i = 0; i < 4; i++)
+					a.col-sm-3.col-xs-6.object-recommendations-slider__col(href="#")
+						.object-recommendations-slider__img
+							img.object-recommendations-slider__pic(src="https://placehold.it/200x100")
+							.object-recommendations-slider__cap Text
+		.object-recommendations-slider__item.item
+			.row.object-recommendations-slider__row
+				- for (var i = 0; i < 4; i++)
+					a.col-sm-3.col-xs-6.object-recommendations-slider__col(href="#")
+						.object-recommendations-slider__img
+							img.object-recommendations-slider__pic(src="https://placehold.it/200x100")
+							.object-recommendations-slider__cap Text
+
+	// Controls
+	a.left.carousel-control(href=".object-recommendations-slider", role="button", data-slide="prev")
+		span.glyphicon.glyphicon-chevron-left(aria-hidden="true")
+		span.sr-only Previous
+
+	a.right.carousel-control(href=".object-recommendations-slider", role="button", data-slide="next")
+		span.glyphicon.glyphicon-chevron-right(aria-hidden="true")
+		span.sr-only Next

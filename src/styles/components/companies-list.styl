@@ -1,0 +1,122 @@
+.companies-list
+	margin: 0
+	padding: 0
+	list-style: none
+	a:hover
+		text-decoration: none
+
+	&__buttons
+		text-align: justify
+		margin: 0
+		padding: 0
+		list-style: none
+
+		&:after
+			content: ''
+			display: inline-block
+			height: 0
+			width: 100%
+	&__btn-item
+		display: inline-block
+	&__button
+		display: inline-block
+		btn(main-green-color, main-green-color)
+		font-size: 12px
+		font-family: "Roboto Bold", sans-serif
+		padding: 10px 20px
+		border-radius: 5px
+	&__img-container
+		font-size: 0
+		float: left
+		height: 170px
+		width: 260px
+		overflow: hidden
+	&__img-container:before
+		content: ''
+		height: 100%
+		width: 0
+		display: inline-block
+		vertical-align: middle
+	&__text-container
+		padding: 15px 25px
+		margin-left: 260px
+	&__item
+		width: 100%
+		height: 170px
+		background: #ededed
+		display: inline-block
+		margin-bottom: 30px
+		transition background .5s
+	&__link
+		display: inline-block
+		width: 100%
+	&__img
+		//min-width: 100%
+		//min-height: 100%
+		//width: auto
+		//height: auto
+		height: auto;
+		width: 90%;
+		vertical-align: middle;
+	&__title
+		overflow: hidden
+		font-size: 36px
+		font-family: "Roboto Bold", sans-serif
+		color: main-green-color
+		margin: 0
+		transition color .5s
+		position: relative
+	&__heading
+		white-space: nowrap
+		padding-right: 100px
+		display: inline-block
+		width: 100%
+		overflow: hidden
+		-ms-text-overflow: ellipsis
+		text-overflow: ellipsis
+	&__rating
+		color: yellow-color
+		font-size: 16px
+		position: absolute
+		right: 0
+		top: 0
+		margin-top: 12px
+	&__date
+		font-size: 13px
+		font-family: "Roboto Medium", sans-serif
+		color: #86939e
+		transition color .5s
+		icon-container()
+
+		&:after
+			icon("/icons/date-icon.png")
+			flaticon-calendar()
+	&__desc
+		margin-top: 10px
+		font-family: "Roboto Regular", sans-serif
+		font-size: 13px
+		color: #515151
+		line-height: 1.35
+		height: 85px
+		overflow: hidden
+		transition color .5s
+		//word-break: break-all
+	&__pagination-container
+		text-align: center
+		margin: 15px 0
+
+
+.companies-list__item:hover
+	background: main-green-color
+	.companies-list__title
+	.companies-list__date
+	.companies-list__desc
+		color white-text-color
+
+.companies-list__btn-item--active .companies-list__button
+	background: main-green-color
+	color: white-text-color
+	&:active
+	&:focus
+	&:hover
+		border-color: main-green-color

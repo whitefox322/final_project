@@ -1,0 +1,94 @@
+@import "../mixins/btn"
+
+.verified-objects-slider
+	&__outer
+		min-height 300px
+		padding 15px
+		background url("/images/publications-bg.png") top left
+	&__inner
+		margin-top 5px
+		height 260px
+	&__heading
+		&-container
+			margin-top 72px
+		font-size 24px
+		font-family "Roboto Bold", sans-serif
+		background url(/icons/checked-big-img.png) no-repeat center bottom
+		color main-green-color
+		padding-bottom 70px
+		padding-left 19px
+		line-height: 1.35
+	&__all-objects-btn
+		btn(#2c2c2c, #2c2c2c)
+		position absolute
+		bottom 0
+		right 200px
+		padding-top 4px
+		padding-bottom 4px
+		z-index 2
+		font-size 10px
+		font-family "Roboto Medium", sans-serif
+	&__indicators
+		bottom 0
+		right 45px
+		width auto
+		left auto
+		margin 0
+	&__indicator
+		border-color #5e5e5e
+		&.active
+			background-color #5e5e5e
+	&__img
+		width 280px
+		height 230px
+		position relative
+		z-index 2
+
+		&-container
+			position relative
+			padding: 15px
+
+			&:before
+				width 260px
+				height 260px
+				position absolute
+				top 0
+				left 0
+				background main-green-color
+				content ''
+			&:after
+				width 30px
+				height 230px
+				position absolute
+				top 15px
+				right -30px
+				background #f4f4f4
+				content ''
+	&__item
+		// bs fixes
+	&__desc
+		color text-default-color
+		position: static
+		text-align: left
+		padding-left 12px
+		padding-top: 35px
+
+	&__desc
+	&__title
+	&__text
+	&__rating
+		text-shadow none
+
+	&__title
+		font-size 26px
+		font-family "Roboto Regular", sans-serif
+		margin-bottom 17px
+	&__text
+		height 100px
+		overflow hidden
+		font-size 16px
+		font-family "Roboto Regular", sans-serif
+		line-height 1.25
+		margin-bottom 12px
+	&__rating
+		color main-green-color

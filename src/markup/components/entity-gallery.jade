@@ -1,0 +1,24 @@
+.entity-gallery
+	.entity-gallery__header
+		h2.entity-gallery__title
+			block entity-gallery__title
+	.entity-gallery__wrapper
+		#gallery.carousel.slide.entity-gallery__slider(data-ride="carousel")
+
+			// Wrapper for slides
+			.carousel-inner(role="listbox")
+				-for (var j = 0; j < 4; j++)
+					.item.entity-gallery__item(class= j == 0 ? " active" : "")
+						.row
+							- for (var i = 0; i < 4; i++)
+								.col-xs-12.col-md-3
+									block entity-gallery__item
+
+			// Controls
+			a.left.carousel-control.entity-gallery__prev(href="#gallery", role="button", data-slide="prev")
+				span.glyphicon.glyphicon-chevron-left(aria-hidden="true")
+				span.sr-only Previous
+
+			a.right.carousel-control.entity-gallery__next(href="#gallery", role="button", data-slide="next")
+				span.glyphicon.glyphicon-chevron-right(aria-hidden="true")
+				span.sr-only Next

@@ -1,0 +1,35 @@
+extends structure/_layout
+include mixins/content-section
+include mixins/rating
+include mixins/breadcrumb
+block title
+	| Компанія "Якась компанія"
+
+block content
+	section.separate-section
+
+		.company-header-container
+			header.company-header
+				include components/object-header
+		.row.company-info
+			.col-xs-12.col-md-6.company-info__col
+				.company-info__img
+					img(src="https://placehold.it/200x200").company-info__pic
+			.col-xs-12.col-md-6.company-info__col
+				include components/object-address
+		.row.company-desc-container
+			.col-xs-12
+				p.company-desc
+					p "МЖК Експрес-24" заснована у 1996 році. Від самого початку становлення та формування компанії відбувалось на основі довготривалої стратегії розвитку, мета якої − надання повного комплексу послуг генерального підрядника, забудовника та інвестора під час будівництва об’єктів житлової, промислової, соціальної та комерційної нерухомості, а також вихід компанії на загальноукраїнський ринок житла.
+
+					p З дня свого заснування компанія пов’язує свої стратегічні плани з вирішенням соціально-економічних проблем міста Івано-Франківська та регіону. Послідовна реалізація стратегії розвитку надала "МЖК Експрес-24" можливість протягом нетривалого часу створити власний проектний відділ, а також парк спеціалізованої техніки (на сьогодні налічує більше 50 одиниць).
+
+					p "МЖК Експрес-24" також має всі необхідні ресурси для налагодження продуктивних партнерських відносин з вітчизняними та зарубіжними промисловими групами, а також компаніями середнього та малого бізнесу України.
+		.row.company-objects-container
+			.col-xs-12
+				include components/company-gallery
+		.row.company-socials-container
+			.col-xs-12
+				.company-socials
+					header.company-socials__heading
+						h2.company-socials__title Ми в соціальних мережах

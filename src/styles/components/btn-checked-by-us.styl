@@ -1,0 +1,23 @@
+
+.btn-checked-by-us
+	btn(main-green-color, main-green-color)
+	padding-left 30px
+	padding-top: 8px
+	padding-bottom: 8px
+	position relative
+	font-size 16px
+	letter-spacing -0.5px
+	font-family "Roboto Medium", sans-serif
+
+	&--active
+		btn-hover(main-green-color, main-green-color)
+
+	&:after
+		position absolute
+		content ''
+		width 16px
+		height 16px
+		top 50%
+		margin-top -8px
+		left 8px
+		flaticon-checked()

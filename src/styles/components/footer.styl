@@ -1,0 +1,32 @@
+.footer
+	padding: 30px 0
+	color: #888
+	&__nav-socials-container
+		color: #888
+		.socials__link
+			&--active
+			&:hover
+				color darken(#888, 20%)
+
+				&:before
+					background darken(#888, 20%)
+	&__dev-text
+		position: absolute
+		top: -15px
+		left: 15px
+		font-size: 10px
+	&__catchup-logo
+		height: 46px
+		width: 100px
+		display: inline-block
+		background: url(/icons/catchup-logo.png) no-repeat center;
+	&__tackle-logo
+		font-size: 20px
+		font-family: Consolas
+		font-weight: bold
+		color: #337ab7
+		letter-spacing: -1.75px
+		&:hover
+			text-decoration: none
+	&__copyright
+		font-size: 10px

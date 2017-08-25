@@ -1,0 +1,7 @@
+mixin panel(title, prefix)
+	.panel.panel-default(class=prefix)
+		if title
+			.panel-heading(class=prefix + "__heading")
+				h3.panel-title(class=prefix + "__title")= title
+		.panel-body(class=prefix + "__body")
+			block

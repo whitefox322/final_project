@@ -1,0 +1,5 @@
+mixin rating(value, max=5)
+	- for (var i = 0; i < Math.min(max, value); i++)
+		span.glyphicon.glyphicon-star
+	- for (var i = 0; i < max - Math.min(max, value); i++)
+		span.glyphicon.glyphicon-star-empty

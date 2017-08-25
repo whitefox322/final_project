@@ -1,0 +1,43 @@
+.socials
+	margin 0
+	padding 0
+	list-style none
+	text-align justify
+	font-size 0
+
+	&:after
+			content ''
+			display inline-block
+			width 100%
+			height 0
+
+	&__item
+		display inline-block
+		
+	&__link
+		color inherit
+		font-size 12px
+		font-family "Roboto Regular", sans-serif
+		font-weight: lighter
+		display inline-block
+
+		&:hover
+		&--active
+			text-decoration: none
+			position relative
+			font-family "Roboto Regular", sans-serif
+			//font-weight: bold
+			&:after
+				position absolute
+				content "·"
+				right -10px
+				top 1px
+				
+			&:before
+				position absolute
+				content ""
+				height 1px
+				width 30px
+				background white-text-color
+				left -35px
+				top 50%

@@ -1,0 +1,31 @@
+extends structure/_layout
+include mixins/content-section
+include mixins/rating
+include mixins/breadcrumb
+block title 
+	| Компанії
+
+block content
+	section.separate-section
+		.row
+			.col-xs-12
+				+breadcrumb('ЖК "Марко Поло"', ["Головна", "Об'єкти будівництва"])
+		.row
+			.col-md-12
+				ul.companies-list
+
+					- for (var i = 0; i < 10; i++)
+						li.companies-list__item
+							a.companies-list__link.clearfix(href="#")
+								.companies-list__img-container
+									img.companies-list__img(src="https://placehold.it/260x170")
+								.companies-list__text-container
+									h2.companies-list__title
+										span.companies-list__rating
+											+rating(3)
+										span.companies-list__heading Бізнес центр SW
+									.companies-list__desc.
+										У будівельній індустрії Прикарпаття вагоме місце займає Івано-Франківська “Спілка забудівників”. Вона була створена у 2006 році для будівництва житлових будинків, об’єктів соціально-культурного призначення в місті Івано-Франківську.
+										Вже кілька років компанія співпрацює з постійними виробниками цегли, залізобетону, вікон, та інших будівельних матеріалів...
+				.companies-list__pagination-container
+					include components/pagination

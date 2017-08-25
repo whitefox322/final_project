@@ -1,0 +1,12 @@
+extends structure/_layout
+include mixins/content-section
+block title 
+	| Об'єкти
+
+block content
+	.row
+		.col-md-3
+			include components/objects-filter-form
+
+		.col-md-9
+			include components/filtered-objects-list

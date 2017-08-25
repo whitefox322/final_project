@@ -1,0 +1,53 @@
+.main-navbar
+	background transparent
+	border none
+	margin-bottom 0
+
+	
+	#main-nav
+		padding: 9px 0;
+		background-color transparent
+
+	&__nav
+		//
+	&__item
+		min-width 70px
+		padding-right 25px
+		display inline-block
+		&:last-child
+			padding-right 0
+		
+	&__link
+		position relative
+		font-size 16px
+		font-family "Roboto Medium", sans-serif
+		color light-grey-color !important
+		padding 15px 0 !important
+		transition color 1s
+		&:after
+			transition background .5s
+			position absolute
+			content ''
+			height 2px
+			width 70px
+			background transparent
+			bottom 0
+			left 50%
+			margin-left -35px
+		
+	&__item--active &__link
+	&__link:hover
+		color light-grey-bold-color !important
+	
+		&:after
+			position absolute
+			content ''
+			height 2px
+			width 70px
+			background main-green-color
+			bottom 0
+			left 50%
+			margin-left -35px
+
+	&__navbar-header
+		width 100%

@@ -1,0 +1,40 @@
+@import "../mixins/label"
+
+.scandalous-object
+	position: relative
+	display: inline-block
+	height: 230px
+	width: 100%
+	overflow: hidden
+
+	&:before
+	&:after
+		content: ''
+		position: absolute
+		bottom: 0
+		right: 0
+		background: rgba(main-green-color, 64%)
+	&:after
+		height: 90px
+		left: 42px
+	&:before
+		height: 60px
+		width: 100%
+
+	&__img
+		height: 100%
+	&__label
+		label(red-color, 13px)
+		left: 10px;
+		font-weight: lighter;
+		padding: 5px 7px;
+		letter-spacing: 0.4px;
+
+	&__title
+		font-size: 18px
+		font-family: "Roboto Medium", sans-serif
+		position: absolute
+		bottom: 21px
+		right: 40px
+		color: white-text-color
+		z-index: 2

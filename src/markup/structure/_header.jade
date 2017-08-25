@@ -1,0 +1,54 @@
+-
+	navItems = [
+	{text: "Будівельні компанії", active: false, link: "company.html"},
+	{text: "Об’єкти будівництва", active: true, link: ""},
+	{text: "Скандальні об’єкти", active: false, link: ""},
+	{text: "Новини", active: false, link: ""},
+	{text: "Публікації", active: false, link: ""},
+	{text: "ТОП 5", active: false, link: ""},
+	{text: "Карта новобудов", active: false, link: ""}
+	]
+
+mixin nav-items(items)
+	ul.nav.navbar-nav.main-navbar__nav
+		each item in items
+			if item.active
+				- var className = "main-navbar__item--active active"
+			else
+				- var className = ""
+			li.main-navbar__item(class=className)
+				a.main-navbar__link(href=item.link)= item.text
+header.main-header
+	.main-header__top
+		.container
+			.row
+				.col-sm-3.col-xs-6.brand-nav-link-container
+					a.brand-nav-link(href="/")
+				.col-md-5.nav-socials-container.hidden-xs.hidden-sm
+					include ../components/nav-socials
+				.col-md-2.col-sm-5.col-xs-6.support-nav-container
+					ul.support-nav
+						li.support-nav__item
+							a.support-nav__link(href="#") Про нас
+						li.support-nav__item
+							a.support-nav__link(href="#") Контакти
+				.col-md-2.col-sm-4.col-xs-10.inline.nav-search-form-container
+					form.nav-search-form
+						button.btn.btn-default.nav-search-form__btn-search
+						input.form-control.nav-search-form__input(type="search", placeholder="Пошук")
+				.col-xs-2.visible-xs-block
+					button.navbar-toggle.collapsed(data-toggle="collapse", data-target="#main-nav", aria-expanded="false")
+						span.sr-only Toggle navigation
+						span.icon-bar
+						span.icon-bar
+						span.icon-bar
+	.main-header__bottom.container-fluid
+		.row
+			.col-xs-12
+				.navbar.navbar-default.main-navbar
+					.container
+						.navbar-header.main-navbar__navbar-header
+
+							.collapse.navbar-collapse#main-nav
+								+nav-items(navItems)
+								button.btn.btn-success.navbar-btn.navbar-right.btn-checked-by-us Перевірено нами

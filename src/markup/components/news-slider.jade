@@ -1,0 +1,44 @@
+.row.news-slider
+	.col-md-8.news-slider__slide-container
+		.news-slider__slide.carousel.slide(data-ride="carousel")
+
+			// Wrapper for slides
+			.carousel-inner(role="listbox")
+				.item.news-slider__item.news-slider__item--active.active
+					.news-slider__img-container
+						img.news-slider__img(src="https://placehold.it/850x390", alt="...")
+					.carousel-caption.news-slider__caption Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat, omnis?
+						a.news-slider__share-link(href="#") Поділитися
+					span.label.label-success.news-slider__label Новини
+				- for (var i = 0; i < 3; i++) 
+					.item.news-slider__item
+						.news-slider__img-container
+							.news-slider__img-wrapper
+								img.news-slider__img(src="https://placehold.it/850x390", alt="...")
+						.carousel-caption.news-slider__caption Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat, omnis?
+							a.news-slider__share-link(href="#") Поділитися
+						span.label.label-success.news-slider__label Новини
+
+	.col-md-4.news-slider__indicators-container
+		ol.carousel-indicators.news-slider__indicators
+			li.news-slider__indicator.news-slider__indicator--active.active(data-target=".news-slider__slide", data-slide-to="0")
+				a(href="#").news-slider__indicator-wrapper
+					.row
+						.col-xs-12
+							.news-slider__indicator-caption Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat, omnis?
+					.row
+						.col-xs-6
+							.news-slider__publish-date 14:30 25/06/2016
+						.col-xs-6
+							.news-slider__comments-count 5 коментарів
+			- for(var i = 0; i < 3; i++)
+				li.news-slider__indicator(data-target=".news-slider__slide", data-slide-to="#{i + 1}")
+					a(href="#").news-slider__indicator-wrapper
+						.row
+							.col-xs-12
+								.news-slider__indicator-caption Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat, omnis?
+						.row
+							.col-xs-6
+								.news-slider__publish-date 14:30 25/06/2016
+							.col-xs-6
+								.news-slider__comments-count 5 коментарів

@@ -1,0 +1,5 @@
+include ../mixins/entities-list
+include ../mixins/entities-list-item
++entities-list("Топ об'єктів", "top-objects")
+	-for (var i = 0; i < 5; i++)
+		+entities-list-item("https://placehold.it/150x100", "Lorem ipsum dolor.", i + 1, "top-objects")

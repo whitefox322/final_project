@@ -1,0 +1,7 @@
+mixin breadcrumb(current, previouosItems)
+
+   ul.breadcrumb
+      - for (var i = 0; i < previouosItems.length; i++)
+         li.breadcrumb__item
+            a(href="#").breadcrumb__link #{previouosItems[i]}
+      li.breadcrumb__item.breadcrumb__item--active.active #{current}

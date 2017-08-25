@@ -1,0 +1,38 @@
+extends structure/_layout
+include mixins/content-section
+include mixins/rating
+include mixins/breadcrumb
+block title 
+	| Новини
+
+block content
+	section.separate-section
+		.row
+			.col-xs-12
+				+breadcrumb('Новини', ["Головна"])
+		.row.news-container
+			.col-xs-12
+				- for (var i = 0; i < 1; i++)
+				.row.news-item__row
+				- for (var j = 0; j < 1; j++)
+				.col-md-4.news-item__wrapper
+					.thumbnail.news-item
+						img.news-item__img(src="https://placehold.it/400x300" alt="Some title")
+						.label.label-success.news-item__label Новини
+						.caption.news-item__caption
+							.news-item__info
+								.news-item__publish-date 25/06/2016 14:30
+								.news-item__comments-count 5
+								a.news-item__share-btn(href="#")
+							h3.news-item__header На Прикарпатті продовжують видавати "теплі кредити". Інфографіка
+							p.news-item__desc
+								span.news-item__desc-wrapper
+									| На офіційному веб-сайті Держенергоефективності запрацювала Інтерактивна карта місцевих програм відшкодування відсотків за «теплими»
+								a.news-item__read-more(href="#")
+							.news-item__footer
+								ul.news-item__tags
+									- for (var s = 0; s < 7; s++)
+									li.news-item__tag
+										a.news-item__tag-link(href="#") Tag name #{s + 1}
+				.news__pagination-container
+					include components/pagination

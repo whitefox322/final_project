@@ -1,0 +1,168 @@
+<script type="text/html" id="user-request">
+	<form action="" class="clearfix" data-bind="submit: save">
+
+		<fieldset>
+			<legend>Загальна інформація про контактну особу</legend>
+			<div class="row form-group"><label for="full-name" class="col-xs-4">ПІБ контактної особи</label>
+				<div class="col-xs-8">
+					<input type="text" class="form-control" id="full-name" name="full-name"
+					       data-bind="value: user.fullName"
+					       placeholder="Введіть ПІБ контактної особи">
+				</div>
+			</div>
+			<div class="row form-group"><label for="user-position" class="col-xs-4">Посада конт. особи</label>
+				<div class="col-xs-8">
+								<textarea class="form-control" id="user-position" name="user-position"
+								          data-bind="value: user.position"
+								          placeholder="Введіть посаду контактної особи"></textarea>
+				</div>
+			</div>
+			<div class="row form-group"><label for="owner-phone-number" class="col-xs-4">Конт. телефон</label>
+				<div class="col-xs-8">
+
+					<input data-bind="value: user.phone"
+					       id="owner-phone-number"
+					       class="form-control"
+					       name="owner-phone-number"
+					       placeholder="Введіть контактний телефон">
+
+				</div>
+			</div>
+			<div class="row form-group"><label for="owner-email" class="col-xs-4">Конт. e-mail</label>
+				<div class="col-xs-8">
+					<input type="email" id="owner-email" class="form-control" name="owner-email"
+					       data-bind="value: user.email"
+					       placeholder="Введіть контактну e-mail адресу">
+				</div>
+			</div>
+		</fieldset>
+		<fieldset>
+			<legend>Інформація про компанію</legend>
+			<div class="row form-group">
+				<label for="company-photo" class="control-label col-xs-4">Логотип компанії</label>
+				<div class="col-xs-8">
+					<img data-bind="attr: { src: company.logoSrc, alt: company.name }"
+					     style="width: 100%;height: auto;"
+					     alt="info.company.name"
+					     id="company-photo">
+					<a href="#" data-bind="click: changeLogo" style="display: block;">Змінити</a>
+				</div>
+			</div>
+			<div class="row form-group"><label for="company-name" class="control-label col-xs-4">Назва компанії</label>
+				<div class="col-xs-8">
+					<input type="text" id="company-name" class="form-control" name="company-name"
+					       data-bind="value: company.name"
+					       placeholder="Введіть назву компанії">
+				</div>
+			</div>
+			<div class="row form-group"><label for="owner-photo" class="col-xs-4">Фото директора</label>
+				<div class="col-xs-8">
+					<img data-bind="attr: { src: company.avatarDirector, alt: company.fullNameDirector }"
+					     style="width: 100%;height: auto;">
+					<a href="#" data-bind="click: changeDirectorAvatar" style="display: block;">Змінити</a>
+				</div>
+			</div>
+			<div class="row form-group"><label for="director-name" class="control-label col-xs-4">ПІБ директора</label>
+				<div class="col-xs-8">
+					<input type="text" id="director-name" class="form-control" name="director-name"
+					       data-bind="value: company.fullNameDirector"
+					       placeholder="Введіть ПІБ директора">
+				</div>
+			</div>
+			<div class="row form-group">
+				<label for="is-show-director" class="control-label col-xs-4">
+					Показувати інфо про директора
+				</label>
+				<div class="col-xs-8">
+					<input type="checkbox"
+					       name="is-show-director"
+					       id="is-show-director"
+					       data-bind="checked: company.isShowDirector">
+				</div>
+			</div>
+		</fieldset>
+		<fieldset>
+			<legend>Опис компанії</legend>
+
+			<div class="rich-editor">
+
+						<textarea name="company-desc" id="company-desc" cols="80" rows="10"
+						          class="form-control"
+						          data-bind="value: company.description"
+						          title="Опис компанії"></textarea>
+
+			</div>
+
+		</fieldset>
+		<fieldset>
+			<legend>
+				Контакти компанії
+				<a href="#" class="btn btn-success btn-xs" data-bind="click: function() { company.addContact() }">
+					<i class="glyphicon glyphicon-plus"></i>
+				</a>
+			</legend>
+
+			<!-- ko foreach: { data: company.contactLines, as: 'contact' } -->
+
+			<div class="row form-group">
+				<label for="" class="col-xs-3">
+					<select name="" id=""
+					        class="form-control"
+					        data-bind="options: ContactLine.types, optionsText: 'name', optionsValue: 'value', value: contact.type">
+
+					</select>
+				</label>
+
+				<div class="col-xs-7">
+					<input type="text" data-bind="value: contact.value" class="form-control">
+				</div>
+				<div class="col-xs-2">
+					<a href="#" class="btn btn-danger"
+					   data-bind="click: function() { $parent.company.removeContact(contact) }">
+						<i class="glyphicon glyphicon-trash"></i>
+					</a>
+				</div>
+			</div>
+
+
+			<!-- /ko -->
+
+		</fieldset>
+
+		<div class="form-group pull-right btn-group">
+
+			<button class="btn btn-success"
+			        title="Зберегти зміни">
+				<span class="glyphicon glyphicon-floppy-save"></span>
+				Зберегти
+			</button>
+			<button class="btn btn-danger" data-dismiss="modal"
+			        title="Скасувати всі зміни">
+				<span class="glyphicon glyphicon-minus-sign"></span>
+				Скасувати
+			</button>
+		</div>
+
+		<input type="file"
+		       data-bind="event: { change: uploadImage }, visible: setFileInput('user-register-form-file-uploader')"
+		       style="display: none;"
+		       id="user-register-form-file-uploader"/>
+	</form>
+</script>
+
+
+<div class="modal fade" tabindex="-1" role="dialog" id="user-request-modal">
+	<div class="modal-dialog modal-lg" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+					aria-hidden="true">&times;</span></button>
+				<h4 class="modal-title">Подання заявки на додавання компанії</h4>
+			</div>
+			<div class="modal-body">
+				<!-- ko template: 'user-request' -->
+				<!-- /ko -->
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

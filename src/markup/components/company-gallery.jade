@@ -1,0 +1,14 @@
+extends entity-gallery
+
+block entity-gallery__title
+	| Останні об'єкти
+block entity-gallery__item
+	.company-object-card
+		.company-object-card__out
+			.company-object-card__img
+				img(src="https://placehold.it/400x400").company-object-card__pic
+			span.company-object-card__label.label.label-success Здано
+			span.company-object-card__rating
+				+rating(3)
+		.company-object-card__footer
+			| ЖК "Затишний"

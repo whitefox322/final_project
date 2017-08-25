@@ -1,0 +1,41 @@
+include ../mixins/rating
+
+.row
+	.col-xs-12
+		ul.filtered-objects-list__buttons
+
+			li.filtered-objects-list__btn-item.filtered-objects-list__btn-item--active
+				a.filtered-objects-list__button(href="#") Всі об'єкти
+			li.filtered-objects-list__btn-item
+				a.filtered-objects-list__button(href="#") Здані
+			li.filtered-objects-list__btn-item
+				a.filtered-objects-list__button(href="#") Будуються
+			li.filtered-objects-list__btn-item
+				a.filtered-objects-list__button(href="#") Проекти
+			li.filtered-objects-list__btn-item
+				a.filtered-objects-list__button(href="#") Скандальні
+		ul.filtered-objects-list
+
+			- for (var i = 0; i < 10; i++)
+				li.filtered-objects-list__item
+					a.filtered-objects-list__link.clearfix(href="#")
+						.filtered-objects-list__img-container
+							img.filtered-objects-list__img(src="https://placehold.it/260x270")
+						.filtered-objects-list__text-container
+							h2.filtered-objects-list__title Бізнес центр SW
+							.filtered-objects-list__rating
+								+rating(3)
+							.filtered-objects-list__date 14:30 25/06/2016
+							.filtered-objects-list__desc.
+								Житловий комплекс "Затишний" розташований неподалік "Німецького озера". Вигідне розташування та комфорт забезпечує найкраще проживання.
+								Характеристика будинку:
+								- для будівництва використовуються сучасні екологічно чисті будівельні матеріали;
+								- розведена внутрішня мідна електропроводка;
+								- лічильники газу, води, електроенергії;
+								- металопластикові вікна з енергоaзберігаючим склопакетом;
+								- якісні вхідні двері;
+								- чистова штукатурка;
+								- автономне опалення...
+
+		.filtered-objects-list__pagination-container
+			include pagination

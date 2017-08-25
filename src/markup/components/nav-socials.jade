@@ -1,0 +1,12 @@
+-
+	socialItems = [
+		{title: "facebook", decor: false},
+		{title: "vkontake", decor: true},
+		{title: "twitter", decor: false},
+		{title: "google plus", decor: false}
+	]
+
+ul.socials
+	- each item in socialItems
+		li.socials__item
+			a.socials__link(href="#", class="socials__link")= item.title

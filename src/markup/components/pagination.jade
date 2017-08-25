@@ -1,0 +1,8 @@
+ul.pagination
+   li.pagination__prev
+      a.pagination__prev-link(href="#") Попередня
+   - for (var i = 0; i < 7; i++)
+      li.pagination__page
+         a.pagination__page-link(href="#")= i + 1
+   li.pagination__next
+      a.pagination__next-link(href="#") Наступна

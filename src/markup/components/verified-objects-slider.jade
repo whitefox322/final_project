@@ -1,0 +1,40 @@
+include ../mixins/rating
+.verified-objects-slider__outer
+	.row
+		.col-xs-12.col-lg-3.verified-objects-slider__heading-container
+			.verified-objects-slider__heading Перевірені об'єкти
+		.col-xs-12.col-lg-9
+			.verified-objects-slider.carousel.slide(data-ride="carousel")
+				// Indicators
+				ol.carousel-indicators.verified-objects-slider__indicators
+					li.verified-objects-slider__indicator(data-target=".verified-objects-slider", data-slide-to="0", class="active")
+					- for (var i = 0; i < 2; i++)
+						li.verified-objects-slider__indicator(data-target=".verified-objects-slider", data-slide-to="#{i + 1}")
+				a(href="#").verified-objects-slider__all-objects-btn Всі об'єкти
+
+				// Wrapper for slides
+				.carousel-inner.verified-objects-slider__inner(role="listbox")
+					.item.verified-objects-slider__item.active
+						.row
+							.col-xs-6
+								.verified-objects-slider__img-container
+									img.verified-objects-slider__img(src="https://placehold.it/280x230", alt="...")
+							.col-xs-6
+								.carousel-caption.verified-objects-slider__desc
+									.verified-objects-slider__title вул.Тичини, 6
+									.verified-objects-slider__text На вулиці Тичини, 6, поруч Івано-Франківської міської дитячої поліклініки, виріс торгово-офісний центр на території зелених насаджень...
+									.verified-objects-slider__rating
+										+rating(3)
+
+					- for (var i = 0; i < 2; i++)
+						.item.verified-objects-slider__item
+							.row
+								.col-xs-6
+									.verified-objects-slider__img-container
+										img.verified-objects-slider__img(src="https://placehold.it/280x230", alt="...")
+								.col-xs-6
+									.carousel-caption.verified-objects-slider__desc
+										.verified-objects-slider__title вул.Тичини, 6
+										.verified-objects-slider__text На вулиці Тичини, 6, поруч Івано-Франківської міської дитячої поліклініки, виріс торгово-офісний центр на території зелених насаджень...
+										.verified-objects-slider__rating
+											+rating(3 + i + 1)

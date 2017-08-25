@@ -1,0 +1,26 @@
+btn-active(tcolor = dark-text-color, bcolor = dark-text-color)
+	background darken(rgba(bcolor, 20%), 20%) !important
+	border 1px solid darken(bcolor, 20%) !important
+	color darken(tcolor, 20%) !important
+	outline none !important
+
+btn-hover(tcolor = dark-text-color, bcolor = dark-text-color)
+	color: white-text-color
+	background tcolor // lighten(rgba(bcolor, 20%), 20%)
+	border 1px solid darken(bcolor, 20%)
+	//color lighten(tcolor, 20%)
+	text-decoration none
+btn(tcolor = dark-text-color, bcolor = dark-text-color)
+	background transparent
+	border 1px solid bcolor
+	color tcolor
+	padding 2px 10px
+	border-radius: 50px
+	font-size 10px
+	transition border-color, color, background .3s
+
+	&:hover
+		btn-hover(tcolor, bcolor)
+	&:active
+	&:focus
+		btn-active(tcolor, bcolor)

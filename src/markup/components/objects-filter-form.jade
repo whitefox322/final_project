@@ -1,0 +1,31 @@
+form.objects-filter-form.objects-filter-form--visible
+	button.objects-filter-form__expand-btn(type=button) Змінити фільтр
+	.objects-filter-form__fieldsets-container
+		fieldset.objects-filter-form__fieldset
+			legend.objects-filter-form__legend Фільтр за містами
+			.objects-filter-form__group.form-group
+				input(type="checkbox", id="checkbox_444").objects-filter-form__checkbox
+				label.objects-filter-form__label(for="checkbox_444") Львів
+
+		fieldset.objects-filter-form__fieldset
+			legend.objects-filter-form__legend Фільтр за районами
+			- for (var i = 0; i < 10; i++)
+				.objects-filter-form__group.form-group
+					input(type="checkbox", id="checkbox_" + i).objects-filter-form__checkbox
+					label.objects-filter-form__label(for="checkbox_" + i) Fitler #{i + 1}
+
+		fieldset.objects-filter-form__fieldset
+			legend.objects-filter-form__legend Фільтр за забудовниками
+			- for (var i = 10; i < 20; i++)
+				.objects-filter-form__group.form-group
+					input(type="checkbox", id="checkbox_" + i).objects-filter-form__checkbox
+					label.objects-filter-form__label(for="checkbox_" + i) Fitler #{i + 1}
+
+		fieldset.objects-filter-form__fieldset
+			legend.objects-filter-form__legend За ціною ($ за м2)
+			.objects-filter-form__group.form-group.objects-filter-form__price-group
+				| від
+				input.objects-filter-form__price.objects-filter-form__price-from.form-control(value="900")
+				| до
+				input.objects-filter-form__price.objects-filter-form__price-to.form-control(value="2000")
+				.objects-filter-form__range(data-max="3000", data-min="100")

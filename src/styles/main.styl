@@ -1,0 +1,305 @@
+@import "mixins/flaticons.styl"
+
+
+@import "_vars"
+@import "_fonts"
+
+@import "components/header"
+@import "components/top-advert"
+@import "components/section-header"
+@import "components/content"
+@import "components/footer"
+@import "components/sidebar"
+
+
+.news-record__content img
+	max-width: 100% !important
+	height: auto !important
+
+
+.top-advert-section img
+.md-advert-widget img
+.sm-advert-widget img
+	max-width: 100% !important
+
+.carousel-control.right
+.carousel-control.left
+	background: none
+	z-index: 2
+
+.object-card__share-btn
+.news-item__share-btn
+.news-slider__share-link
+	position: relative
+	cursor: pointer
+
+	.share-btns
+		opacity: 0
+		visibility: hidden
+	&:hover
+		.share-btns
+			transition: opacity .5s
+			opacity: 1
+			visibility: visible
+
+
+.star-rating
+	font-size: 24px !important
+
+.separate-section
+	margin-bottom 15px
+
+.top-advert-section
+	margin-bottom: 30px
+
+.sidebar-widget
+	margin-bottom: 30px
+
+.news__pagination-container
+	text-align: center
+	margin-top: 20px
+	display: inline-block
+	width: 100%
+
+.gallery-container
+	display: inline-block
+	margin-top: 20px
+	width: 100%
+
+.news-record__img-container
+	margin-bottom: 20px
+
+.news-record__tags-container
+	margin: 10px 0
+	.news-item__tags
+		&:before
+			top: 50% !important
+			margin-top: -8px !important
+
+.news-container
+	margin-top: 20px
+
+.navbar-toggle.collapsed
+	border-color: #fff
+	.icon-bar
+		background: #fff
+
+.company-header-container
+	margin-bottom: 20px
+
+.company-desc-container
+	margin: 40px 0
+
+.company-objects-container
+	.entity-gallery
+	.entity-gallery__title
+		background: white !important
+
+.navbar-toggle
+	border-color: #aff
+	.icon-bar
+		background: #aff
+
+@media (max-width: 1200px)
+	.verified-objects-slider__heading-container
+		margin-top: 0 !important
+		margin-bottom: 20px
+
+	.verified-objects-slider__heading
+		background-size: contain !important
+		padding: 30px 0 !important
+		padding-left: 160px !important
+		background-position: left center !important
+
+	.main-navbar__item
+		min-width: 55px
+		padding-right: 15px
+
+	.main-navbar__link
+		font-size: 14px
+
+@media (max-width: 992px)
+	.news-slider__img-wrapper
+		width: 100% !important
+	.footer__nav-socials-container
+		display: none !important
+
+	.footer__dev-text-container
+	.footer__copyright
+		width: 50% !important
+
+	.footer__dev-text
+		font-size: 0
+
+	.shares-slider__img
+		width: auto !important
+		height: 100%
+
+	.news-slider__indicators-container
+		display: none !important
+
+	.news-item__wrapper
+		margin-bottom: 20px !important
+
+	.news-slider__slide-container
+		padding-right: 15px !important
+
+	.top5-conainer-col:last-child
+	.publications-container-col:last-child
+		display: none
+
+	.main-navbar__item
+		min-width: auto
+		font-size: 12px
+
+	.main-navbar__link
+		font-size: 11px
+	.pagination__prev-link
+	.pagination__next-link
+		margin: 0 !important
+
+	.pagination>li>a
+	.pagination>li>span
+		padding: 6px 5px !important
+
+@media (min-width: 768px) and (max-width: 992px)
+	.btn-checked-by-us
+		font-size: 11px
+		padding-left: 10px
+		&:after
+			content: none !important
+
+@media (max-width: 767px)
+	.breadcrumb__item
+	.breadcrumb__link
+		font-size: 14px !important
+	.shares-slider__text-container
+		margin-left: 0 !important
+	.object-header__text
+		padding: 0 !important
+		text-align: left !important
+	.object-header__rating
+		position: static !important
+		width: 100% !important
+	.company-info
+	.company-info__pic
+		width: 100% !important
+		height: auto !important
+	.navbar-toggle
+		margin-right: 0 !important
+	.company-of-month__img
+		width: 100% !important
+		height: auto !important
+	.verified-objects-slider__heading
+		padding: 0 !important
+		padding-left: 100px !important
+	.shares-slider__desc
+		width: 100% !important
+
+	.main-navbar__link
+		font-size: 17px
+
+	.inline.nav-search-form-container
+		border: 0
+
+	.brand-nav-link
+		position: static !important
+
+	.support-nav
+		text-align: justify !important
+		white-space: normal !important
+		&:after
+			content: ''
+			display: inline-block
+			width: 100%
+			height: 0
+
+	.support-nav__item
+		margin: 0 !important
+
+	.support-nav__link
+		font-size: 18px
+
+	#main-nav
+		padding: 0 15px !important
+		text-align: center
+
+	.main-navbar
+		min-height: 0
+
+	.container-fluid > .navbar-collapse, .container-fluid > .navbar-header, .container > .navbar-collapse, .container > .navbar-header
+		margin: 0
+
+	.main-navbar__item
+		padding: 0 !important
+
+	.shares-slider__text-container
+	.shares-slider__img-container
+		float: left
+		width: 100% !important
+	.shares-slider__img
+		width: 100% !important
+		height: auto !important
+
+	.scandalous-object__col:last-child
+		display: none
+
+	.shares-slider__read
+		right: 50% !important
+
+	.verified-objects-slider__all-objects-btn
+	.section-header__btn
+	.shares-slider__read
+	.last-news__show-all-btn
+		font-size: 16px !important
+
+	.company-object-card__footer
+		&:after
+			content: none !important
+
+	.scandalous-object__col
+		width: 50% !important
+
+	.top-companies__list-img-col
+		display: none !important
+
+	.top-companies__list-text-col
+		width: 100% !important
+
+	.last-news__text
+		font-size: 18px !important
+
+	.shares-slider__text-container
+		padding-left: 10px !important
+
+@media (max-width: 460px)
+
+
+	.verified-objects-slider__all-objects-btn
+		color: #f4f4f4 !important
+		border-color: #f4f4f4 !important
+		right: 150px !important
+
+	.verified-objects-slider__indicator
+		border-color: #f4f4f4 !important
+
+	.verified-objects-slider__indicator.active
+		background-color: #f4f4f4 !important
+
+
+	.filtered-objects-list__btn-item
+	.filtered-objects-list__button
+		display: block !important
+	.support-nav__link
+		font-size: 14px
+
+	.filtered-objects-list__img-container
+	.companies-list__img-container
+		display: none !important
+
+	.filtered-objects-list__text-container
+	.companies-list__text-container
+		margin: 0 !important
+
+	.filtered-objects-list__button
+		padding: 10px 5px !important

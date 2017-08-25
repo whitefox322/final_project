@@ -1,0 +1,52 @@
+.pagination
+	display: block
+
+	&__page
+		&.active > .pagination__page-link
+		&.active > span
+			color: main-green-color
+			border-color: lighten(main-green-color, 20%)
+			background: lighten(main-green-color, 80%)
+	&__prev-link
+	&__next-link
+	&__page-link
+		float: none
+		font-family: "Roboto Bold", sans-serif
+		font-size: 16px
+		transition background, color, border .3s, .3s, .3s
+
+	&__prev-link
+	&__next-link
+		color: main-green-color
+		border-color: main-green-color
+		border-radius: 4px
+		&:hover
+		&.active
+			color: main-green-color
+			border-color: lighten(main-green-color, 20%)
+			background: lighten(main-green-color, 80%)
+
+	&__prev-link
+		margin-right: 35px
+
+	&__next-link
+		margin-left: 35px
+
+	&__page-link
+		color: #515151
+		border: none
+
+
+	&__prev
+	&__next
+		&.disabled
+			.pagination__prev-link
+			.pagination__next-link
+				color: #ccc
+				border-color: #ccc
+
+				&:hover
+				&.active
+					color: #ccc
+					border-color: #ccc
+					background: lighten(#ccc, 80%)
