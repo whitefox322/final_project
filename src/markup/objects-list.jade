@@ -1,9 +1,14 @@
 extends structure/_layout
 include mixins/content-section
+include mixins/breadcrumb
+
 block title 
 	| Об'єкти
 
 block content
+	.row
+		.col-xs-12
+			+breadcrumb("Об'єкти будівництва", ["Головна"])
 	.row
 		.col-md-3
 			include components/objects-filter-form

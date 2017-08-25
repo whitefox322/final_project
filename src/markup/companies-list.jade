@@ -9,14 +9,14 @@ block content
 	section.separate-section
 		.row
 			.col-xs-12
-				+breadcrumb('ЖК "Марко Поло"', ["Головна", "Об'єкти будівництва"])
+				+breadcrumb('Будівельні компанії', ["Головна"])
 		.row
 			.col-md-12
 				ul.companies-list
 
 					- for (var i = 0; i < 10; i++)
 						li.companies-list__item
-							a.companies-list__link.clearfix(href="#")
+							a.companies-list__link.clearfix(href="company.html")
 								.companies-list__img-container
 									img.companies-list__img(src="https://placehold.it/260x170")
 								.companies-list__text-container
