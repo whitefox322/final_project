@@ -1,11 +1,9 @@
-- var isDevelopment = true
 doctype html
 html
 	head
 		title
 			block title
-		if isDevelopment
-			link(rel="stylesheet", href="/css/vendor.min.css")
+		link(rel="stylesheet", href="/css/vendor.min.css")
 		link(rel="stylesheet", href="/css/app.min.css")
 	body
 		include _header
